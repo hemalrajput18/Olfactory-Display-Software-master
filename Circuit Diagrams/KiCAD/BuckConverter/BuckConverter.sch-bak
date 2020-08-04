@@ -1,0 +1,182 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:LM2596S_New U?
+U 1 1 5E88795D
+P 4350 2350
+F 0 "U?" H 4350 2717 50  0001 C CNN
+F 1 "LM2596 Buck Converter" H 4350 2625 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 4400 2100 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2596.pdf" H 4300 2300 50  0001 C CNN
+	1    4350 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:LM2596S_New U?
+U 1 1 5E88840B
+P 4350 3200
+F 0 "U?" H 4350 3567 50  0001 C CNN
+F 1 "LM2596 Buck Converter" H 4350 3475 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 4400 2950 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2596.pdf" H 4300 3150 50  0001 C CNN
+	1    4350 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2450 4900 2450
+Wire Wire Line
+	3700 2450 3700 3300
+Wire Wire Line
+	3700 3300 3850 3300
+Wire Wire Line
+	3700 2450 3850 2450
+$Comp
+L power:+30V #PWR?
+U 1 1 5E891980
+P 3750 2250
+F 0 "#PWR?" H 3750 2100 50  0001 C CNN
+F 1 "+30V" H 3765 2423 50  0000 C CNN
+F 2 "" H 3750 2250 50  0001 C CNN
+F 3 "" H 3750 2250 50  0001 C CNN
+	1    3750 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+24V #PWR?
+U 1 1 5E892477
+P 4900 2450
+F 0 "#PWR?" H 4900 2300 50  0001 C CNN
+F 1 "+24V" V 4915 2578 50  0000 L CNN
+F 2 "" H 4900 2450 50  0001 C CNN
+F 3 "" H 4900 2450 50  0001 C CNN
+	1    4900 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 2250 3800 2250
+$Comp
+L power:GND #PWR?
+U 1 1 5E8935CA
+P 3550 2450
+F 0 "#PWR?" H 3550 2200 50  0001 C CNN
+F 1 "GND" V 3555 2322 50  0000 R CNN
+F 2 "" H 3550 2450 50  0001 C CNN
+F 3 "" H 3550 2450 50  0001 C CNN
+	1    3550 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3550 2450 3700 2450
+Connection ~ 3700 2450
+Wire Wire Line
+	3800 2250 3800 3100
+Wire Wire Line
+	3800 3100 3850 3100
+Connection ~ 3800 2250
+Wire Wire Line
+	3800 2250 3850 2250
+Wire Wire Line
+	4850 3300 4900 3300
+$Comp
+L power:+12V #PWR?
+U 1 1 5E89454C
+P 4900 3300
+F 0 "#PWR?" H 4900 3150 50  0001 C CNN
+F 1 "+12V" V 4915 3428 50  0000 L CNN
+F 2 "" H 4900 3300 50  0001 C CNN
+F 3 "" H 4900 3300 50  0001 C CNN
+	1    4900 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Regulator_Linear:LM1085-5.0 U?
+U 1 1 5E898BDD
+P 6000 3000
+F 0 "U?" H 6000 3242 50  0001 C CNN
+F 1 "LM1085 Linear Voltage Regulator" H 6000 3151 50  0000 C CNN
+F 2 "" H 6000 3250 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1085.pdf" H 6000 3000 50  0001 C CNN
+	1    6000 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 3300 4900 3000
+Connection ~ 4900 3300
+Wire Wire Line
+	6000 3300 6000 3600
+Wire Wire Line
+	3700 3600 3700 3300
+Connection ~ 3700 3300
+$Comp
+L power:+5V #PWR?
+U 1 1 5E89BBC7
+P 6500 3000
+F 0 "#PWR?" H 6500 2850 50  0001 C CNN
+F 1 "+5V" V 6515 3128 50  0000 L CNN
+F 2 "" H 6500 3000 50  0001 C CNN
+F 3 "" H 6500 3000 50  0001 C CNN
+	1    6500 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3700 3600 5550 3600
+Wire Wire Line
+	4900 3000 5550 3000
+Wire Wire Line
+	5550 3150 5550 3000
+Connection ~ 5550 3000
+Wire Wire Line
+	5550 3000 5700 3000
+Wire Wire Line
+	5550 3450 5550 3600
+Connection ~ 5550 3600
+Wire Wire Line
+	5550 3600 6000 3600
+$Comp
+L Device:C Capacitor
+U 1 1 5E89D8A8
+P 5550 3300
+F 0 "Capacitor" H 5665 3346 50  0001 C CNN
+F 1 "10nF" H 5665 3255 50  0000 L CNN
+F 2 "" H 5588 3150 50  0001 C CNN
+F 3 "~" H 5550 3300 50  0001 C CNN
+	1    5550 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C Capacitor?
+U 1 1 5E8A45E4
+P 6400 3300
+F 0 "Capacitor?" H 6515 3346 50  0001 C CNN
+F 1 "10nF" H 6515 3255 50  0000 L CNN
+F 2 "" H 6438 3150 50  0001 C CNN
+F 3 "~" H 6400 3300 50  0001 C CNN
+	1    6400 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3000 6400 3000
+Wire Wire Line
+	6000 3600 6400 3600
+Wire Wire Line
+	6400 3600 6400 3450
+Connection ~ 6000 3600
+Wire Wire Line
+	6400 3150 6400 3000
+Connection ~ 6400 3000
+Wire Wire Line
+	6400 3000 6500 3000
+$EndSCHEMATC

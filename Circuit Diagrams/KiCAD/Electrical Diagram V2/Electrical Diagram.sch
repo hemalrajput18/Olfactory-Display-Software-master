@@ -1,0 +1,713 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Raspberry_Pi_2_3 J?
+U 1 1 5E405F0E
+P 6650 4050
+F 0 "J?" H 6650 5531 50  0001 C CNN
+F 1 "Raspberry_Pi_2_3" H 6650 5439 50  0000 C CNN
+F 2 "" H 6650 4050 50  0001 C CNN
+F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 6650 4050 50  0001 C CNN
+	1    6650 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 3450 8100 3450
+Wire Wire Line
+	7450 3550 7650 3550
+Connection ~ 8850 5400
+Wire Wire Line
+	9850 5400 8850 5400
+Wire Wire Line
+	9850 5250 9850 5400
+Connection ~ 8850 2700
+Wire Wire Line
+	9850 2700 8850 2700
+Connection ~ 7800 3550
+Wire Wire Line
+	7800 4950 9450 4950
+Wire Wire Line
+	7800 3550 7800 4950
+Wire Wire Line
+	8100 3450 8350 3450
+Connection ~ 8100 3450
+Wire Wire Line
+	8100 4850 9450 4850
+Wire Wire Line
+	8100 3450 8100 4850
+Wire Wire Line
+	6750 2700 6750 2750
+Connection ~ 6750 2700
+Wire Wire Line
+	8850 2700 8850 2950
+Wire Wire Line
+	6750 2700 8850 2700
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E42E67D
+P 6750 2500
+F 0 "#PWR?" H 6750 2350 50  0001 C CNN
+F 1 "+3.3V" H 6765 2673 50  0000 C CNN
+F 2 "" H 6750 2500 50  0001 C CNN
+F 3 "" H 6750 2500 50  0001 C CNN
+	1    6750 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5E42AA8F
+P 6250 5450
+F 0 "#PWR?" H 6250 5200 50  0001 C CNN
+F 1 "GND" H 6255 5277 50  0000 C CNN
+F 2 "" H 6250 5450 50  0001 C CNN
+F 3 "" H 6250 5450 50  0001 C CNN
+	1    6250 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 5400 6950 5350
+Wire Wire Line
+	8850 5400 6950 5400
+Wire Wire Line
+	8850 4150 8850 5400
+$Comp
+L Sensor:BME280_updated U?
+U 1 1 5E41B938
+P 8950 3550
+F 0 "U?" H 8520 3596 50  0001 R CNN
+F 1 "BME280 Temperature/Pressure Sensor" H 8520 3550 50  0000 R CNN
+F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 10450 3100 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-DS002.pdf" H 8950 3350 50  0001 C CNN
+	1    8950 3550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 3550 8350 3650
+$Comp
+L power:GND #PWR?
+U 1 1 5E45BDF8
+P 9000 9050
+F 0 "#PWR?" H 9000 8800 50  0001 C CNN
+F 1 "GND" H 9005 8877 50  0000 C CNN
+F 2 "" H 9000 9050 50  0001 C CNN
+F 3 "" H 9000 9050 50  0001 C CNN
+	1    9000 9050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 9000 9950 9000
+Wire Wire Line
+	9000 9000 9000 9050
+Connection ~ 9000 9000
+Wire Wire Line
+	9000 6800 9000 6850
+Connection ~ 9000 6800
+Wire Wire Line
+	9950 6800 9950 7750
+Wire Wire Line
+	9000 6800 9950 6800
+Wire Wire Line
+	9000 6750 9000 6800
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5E45DCD8
+P 9000 6750
+F 0 "#PWR?" H 9000 6600 50  0001 C CNN
+F 1 "+3.3V" H 9015 6923 50  0000 C CNN
+F 2 "" H 9000 6750 50  0001 C CNN
+F 3 "" H 9000 6750 50  0001 C CNN
+	1    9000 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9950 9000 9950 8650
+Wire Wire Line
+	9000 8950 9000 9000
+Wire Wire Line
+	9400 8350 9450 8350
+Wire Wire Line
+	9400 8250 9500 8250
+$Comp
+L MCU_Module:Arduino_UNO_R2 A?
+U 1 1 5E450759
+P 8900 7850
+F 0 "A?" H 8900 9031 50  0001 C CNN
+F 1 "Arduino_UNO_R2" H 8900 8939 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R2" H 8900 7850 50  0001 C CIN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 8900 7850 50  0001 C CNN
+	1    8900 7850
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	8150 6450 8150 9300
+Wire Notes Line
+	8150 6450 11250 6450
+$Comp
+L ADC-PI-NEW_V2-cache:MakeShiftSensor_ADS1115IDGS U?
+U 1 1 5E4AFC30
+P 9950 8250
+F 0 "U?" H 9950 8931 50  0001 C CNN
+F 1 "ADS1115IDGS ADC" H 9950 8839 50  0000 C CNN
+F 2 "Package_SO:TSSOP-10_3x3mm_P0.5mm" H 9950 7750 50  0001 C CNN
+F 3 "" H 9900 7350 50  0001 C CNN
+	1    9950 8250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 8150 10550 8150
+Wire Wire Line
+	10350 8250 10550 8250
+$Comp
+L ADC-PI-NEW_V2-cache:Breathing_CCT U?
+U 1 1 5E4AD42B
+P 10900 8400
+F 0 "U?" H 10958 8515 50  0001 C CNN
+F 1 "Breathing_CCT" H 10622 8175 50  0000 R CNN
+F 2 "" H 10800 8400 50  0001 C CNN
+F 3 "" H 10800 8400 50  0001 C CNN
+	1    10900 8400
+	-1   0    0    1   
+$EndComp
+Wire Notes Line
+	11250 6450 11250 9300
+Wire Notes Line
+	8150 9300 11250 9300
+Text Label 8200 6400 0    50   ~ 0
+Breathing_Circuit
+Wire Wire Line
+	7800 3550 8350 3550
+$Comp
+L DAC:DAC8532 U?
+U 1 1 5E42006F
+P 4800 2800
+F 0 "U?" H 5025 2915 50  0001 C CNN
+F 1 "DAC8532" H 5025 2824 50  0000 C CNN
+F 2 "" H 4750 2800 50  0001 C CNN
+F 3 "" H 4750 2800 50  0001 C CNN
+	1    4800 2800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L ADC-PI-NEW_V2-cache:Atomiser U?
+U 1 1 5E4B45FE
+P 5250 3800
+F 0 "U?" H 5578 3713 50  0001 L CNN
+F 1 "Atomiser" H 5022 3667 50  0000 R CNN
+F 2 "" H 5200 3950 50  0001 C CNN
+F 3 "" H 5200 3950 50  0001 C CNN
+	1    5250 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E448468
+P 6450 2500
+F 0 "#PWR?" H 6450 2350 50  0001 C CNN
+F 1 "+5V" H 6465 2673 50  0000 C CNN
+F 2 "" H 6450 2500 50  0001 C CNN
+F 3 "" H 6450 2500 50  0001 C CNN
+	1    6450 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 5350 6250 5400
+Connection ~ 6250 5400
+Wire Wire Line
+	6250 5400 6250 5450
+Wire Wire Line
+	5000 3250 5100 3250
+Wire Wire Line
+	5100 3250 5100 3450
+Wire Wire Line
+	4150 3150 3950 3150
+Wire Wire Line
+	3950 3150 3950 2150
+Wire Wire Line
+	3950 2150 7650 2150
+Wire Wire Line
+	7650 2150 7650 3550
+Connection ~ 7650 3550
+Wire Wire Line
+	7650 3550 7800 3550
+Wire Wire Line
+	5300 3450 5700 3450
+Wire Wire Line
+	5700 3450 5700 3550
+Wire Wire Line
+	5700 3550 5850 3550
+Wire Wire Line
+	4150 3050 4050 3050
+Wire Wire Line
+	5850 3400 5850 3450
+$Comp
+L Bio_Chem:Bio_Chem_Valve U?
+U 1 1 5E49AB46
+P 5800 7800
+F 0 "U?" H 5858 7865 50  0001 C CNN
+F 1 "Bio_Chem_Valve" H 5858 7773 50  0000 C CNN
+F 2 "" H 5550 7800 50  0001 C CNN
+F 3 "" H 5550 7800 50  0001 C CNN
+	1    5800 7800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10950 4300 10600 4300
+Wire Wire Line
+	10600 4300 10600 4750
+Wire Wire Line
+	10600 4750 10250 4750
+Wire Wire Line
+	11300 4000 11300 1950
+Wire Wire Line
+	11300 1950 6100 1950
+Wire Wire Line
+	6100 1950 6100 2500
+Wire Wire Line
+	6100 2500 6450 2500
+Connection ~ 6450 2500
+Wire Wire Line
+	11300 4650 11300 5400
+Wire Wire Line
+	11300 5400 9850 5400
+Connection ~ 9850 5400
+$Comp
+L PID:PID U?
+U 1 1 5E44A8B8
+P 11450 4050
+F 0 "U?" H 11372 3821 50  0001 R CNN
+F 1 "PID" H 11372 3775 50  0000 R CNN
+F 2 "" H 11450 4050 50  0001 C CNN
+F 3 "" H 11450 4050 50  0001 C CNN
+	1    11450 4050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	12200 4450 12200 4550
+$Comp
+L power:+10V #PWR?
+U 1 1 5E477020
+P 12200 4450
+F 0 "#PWR?" H 12200 4300 50  0001 C CNN
+F 1 "+10V" H 12215 4623 50  0000 C CNN
+F 2 "" H 12200 4450 50  0001 C CNN
+F 3 "" H 12200 4450 50  0001 C CNN
+	1    12200 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L PID:PID U?
+U 1 1 5E45613A
+P 12350 4600
+F 0 "U?" H 12272 4371 50  0001 R CNN
+F 1 "Flow Meter" H 12272 4325 50  0000 R CNN
+F 2 "" H 12350 4600 50  0001 C CNN
+F 3 "" H 12350 4600 50  0001 C CNN
+	1    12350 4600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 4850 11850 4850
+Wire Wire Line
+	12200 5400 11750 5400
+Connection ~ 11300 5400
+$Comp
+L Timer_RTC:DS1307+ U?
+U 1 1 5E499307
+P 10700 7250
+F 0 "U?" H 11244 7296 50  0001 L CNN
+F 1 "DS1307+ RTC" H 11244 7250 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 10700 6750 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/DS1307.pdf" H 10700 7050 50  0001 C CNN
+	1    10700 7250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E4A52A3
+P 9250 6700
+F 0 "#PWR?" H 9250 6550 50  0001 C CNN
+F 1 "+5V" H 9265 6873 50  0000 C CNN
+F 2 "" H 9250 6700 50  0001 C CNN
+F 3 "" H 9250 6700 50  0001 C CNN
+	1    9250 6700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9250 6700 9250 6750
+Wire Wire Line
+	9250 6850 9100 6850
+Wire Wire Line
+	9250 6750 10600 6750
+Wire Wire Line
+	10600 6750 10600 6850
+Connection ~ 9250 6750
+Wire Wire Line
+	9250 6750 9250 6850
+Wire Wire Line
+	10200 7150 9500 7150
+Wire Wire Line
+	9500 7150 9500 8250
+Connection ~ 9500 8250
+Wire Wire Line
+	9500 8250 9550 8250
+Wire Wire Line
+	10200 7050 9450 7050
+Wire Wire Line
+	9450 7050 9450 8350
+Connection ~ 9450 8350
+Wire Wire Line
+	9450 8350 9550 8350
+Wire Wire Line
+	10700 7650 10700 7800
+Wire Wire Line
+	10700 7800 10500 7800
+Wire Wire Line
+	10500 7800 10500 9000
+Wire Wire Line
+	10500 9000 9950 9000
+Connection ~ 9950 9000
+Wire Wire Line
+	5000 3150 5450 3150
+Wire Wire Line
+	5450 3150 5450 1650
+Wire Wire Line
+	5450 1650 12250 1650
+$Comp
+L Regulator_Switching:LM2596S-ADJ U?
+U 1 1 5E4671A8
+P 9200 10700
+F 0 "U?" H 9200 11067 50  0000 C CNN
+F 1 "LM2596S-ADJ" H 9200 10976 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 9250 10450 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2596.pdf" H 9200 10700 50  0001 C CNN
+	1    9200 10700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:LM2596S-ADJ U?
+U 1 1 5E468205
+P 11050 10650
+F 0 "U?" H 11050 11017 50  0000 C CNN
+F 1 "LM2596S-ADJ" H 11050 10926 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TO-263-5_TabPin3" H 11100 10400 50  0001 L CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2596.pdf" H 11050 10650 50  0001 C CNN
+	1    11050 10650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Stepper_Motor_Controller:Stepper_Motor_Controller U?
+U 1 1 5E4765C4
+P 12650 2100
+F 0 "U?" H 12525 2125 50  0001 C CNN
+F 1 "Stepper_Motor_Controller" H 12525 2033 50  0000 C CNN
+F 2 "" H 12350 2100 50  0001 C CNN
+F 3 "" H 12350 2100 50  0001 C CNN
+	1    12650 2100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Motor:Stepper_Motor_bipolar M?
+U 1 1 5E49CCB5
+P 14300 2850
+F 0 "M?" H 14488 2974 50  0001 L CNN
+F 1 "TCS Dosing Pump" H 14488 2928 50  0000 L CNN
+F 2 "" H 14310 2840 50  0001 C CNN
+F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 14310 2840 50  0001 C CNN
+	1    14300 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13200 2300 14400 2300
+Wire Wire Line
+	14400 2300 14400 2550
+Wire Wire Line
+	13200 2500 14200 2500
+Wire Wire Line
+	14200 2500 14200 2550
+Wire Wire Line
+	13200 2400 13850 2400
+Wire Wire Line
+	13850 2400 13850 2750
+Wire Wire Line
+	13850 2750 14000 2750
+Wire Wire Line
+	13200 2600 13750 2600
+Wire Wire Line
+	13750 2600 13750 2950
+Wire Wire Line
+	13750 2950 14000 2950
+Wire Wire Line
+	12200 5200 12200 5400
+Wire Wire Line
+	13200 2700 13300 2700
+Wire Wire Line
+	13300 2700 13300 5400
+Connection ~ 12200 5400
+Wire Wire Line
+	13200 2800 13400 2800
+Wire Wire Line
+	12350 2550 11750 2550
+Wire Wire Line
+	11750 2550 11750 5400
+Connection ~ 11750 5400
+Wire Wire Line
+	11750 5400 11300 5400
+Wire Wire Line
+	6250 5400 4400 5400
+Wire Wire Line
+	4250 5400 4250 5200
+$Comp
+L power:+5V #PWR?
+U 1 1 5E47F867
+P 4250 3700
+F 0 "#PWR?" H 4250 3550 50  0001 C CNN
+F 1 "+5V" H 4265 3873 50  0000 C CNN
+F 2 "" H 4250 3700 50  0001 C CNN
+F 3 "" H 4250 3700 50  0001 C CNN
+	1    4250 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 3700 4250 3800
+$Comp
+L KNF_Pump:KNF_Pump U?
+U 1 1 5E473DBE
+P 3050 4450
+F 0 "U?" H 2772 4196 50  0001 R CNN
+F 1 "KNF_Pump" H 2772 4150 50  0000 R CNN
+F 2 "" H 3000 4400 50  0001 C CNN
+F 3 "" H 3000 4400 50  0001 C CNN
+	1    3050 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_Motor:L298HN U?
+U 1 1 5E478829
+P 4250 4500
+F 0 "U?" H 4250 5381 50  0001 C CNN
+F 1 "L298N KNF Pump Driver" H 4250 5289 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-15_P2.54x2.54mm_StaggerOdd_Lead4.58mm_Vertical" H 4300 3850 50  0001 C CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000240.pdf" H 4400 4750 50  0001 C CNN
+	1    4250 4500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 4700 3650 4700
+Wire Wire Line
+	3100 5050 3100 5400
+Wire Wire Line
+	4050 3400 5850 3400
+Wire Wire Line
+	4050 3050 4050 3400
+Connection ~ 4250 5400
+Wire Wire Line
+	3100 5400 4250 5400
+$Comp
+L 30V:+30V #PWR?
+U 1 1 5E5FC832
+P 13400 2800
+F 0 "#PWR?" H 13400 2650 50  0001 C CNN
+F 1 "+30V" V 13415 2928 50  0000 L CNN
+F 2 "" H 13400 2800 50  0001 C CNN
+F 3 "" H 13400 2800 50  0001 C CNN
+	1    13400 2800
+	0    1    1    0   
+$EndComp
+Text Label 7300 6000 0    50   ~ 0
+USB_A
+Wire Wire Line
+	7250 6750 8150 6750
+Wire Wire Line
+	7250 5250 7250 6750
+$Comp
+L 12V:+12V #PWR?
+U 1 1 5E63D941
+P 6050 6500
+F 0 "#PWR?" H 6050 6350 50  0001 C CNN
+F 1 "+12V" V 6065 6628 50  0000 L CNN
+F 2 "" H 6050 6500 50  0001 C CNN
+F 3 "" H 6050 6500 50  0001 C CNN
+	1    6050 6500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5950 6500 6050 6500
+Wire Wire Line
+	4400 6400 4400 5400
+Connection ~ 4400 5400
+Wire Wire Line
+	4400 5400 4250 5400
+Wire Wire Line
+	4550 6400 4400 6400
+Wire Wire Line
+	5450 7600 5350 7600
+Wire Wire Line
+	5350 7600 5350 7000
+$Comp
+L Driver_Motor:L298HN U?
+U 1 1 5E61C5AA
+P 5250 6400
+F 0 "U?" V 5204 7144 50  0001 L CNN
+F 1 "L298N BioChem Valve Driver" V 5250 7144 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-15_P2.54x2.54mm_StaggerOdd_Lead4.58mm_Vertical" H 5300 5750 50  0001 L CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000240.pdf" H 5400 6650 50  0001 C CNN
+	1    5250 6400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5450 7000 5450 7450
+Wire Wire Line
+	4150 2950 2300 2950
+Wire Wire Line
+	2300 2950 2300 5400
+Wire Wire Line
+	2300 5400 3100 5400
+Connection ~ 3100 5400
+$Comp
+L power:+5V #PWR?
+U 1 1 5E6DB9C7
+P 6000 6300
+F 0 "#PWR?" H 6000 6150 50  0001 C CNN
+F 1 "+5V" V 6015 6428 50  0000 L CNN
+F 2 "" H 6000 6300 50  0001 C CNN
+F 3 "" H 6000 6300 50  0001 C CNN
+	1    6000 6300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5950 6400 5950 6300
+Wire Wire Line
+	5950 6300 6000 6300
+$Comp
+L 12V:+12V #PWR?
+U 1 1 5E6F3E5A
+P 3100 4350
+F 0 "#PWR?" H 3100 4200 50  0001 C CNN
+F 1 "+12V" H 3115 4523 50  0000 C CNN
+F 2 "" H 3100 4350 50  0001 C CNN
+F 3 "" H 3100 4350 50  0001 C CNN
+	1    3100 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E6F4670
+P 4150 3650
+F 0 "#PWR?" H 4150 3500 50  0001 C CNN
+F 1 "+5V" H 4165 3823 50  0000 C CNN
+F 2 "" H 4150 3650 50  0001 C CNN
+F 3 "" H 4150 3650 50  0001 C CNN
+	1    4150 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 3650 4150 3800
+Wire Wire Line
+	3100 4350 3100 4450
+Wire Wire Line
+	6750 2500 6750 2600
+Wire Wire Line
+	6450 2500 6450 2550
+Wire Wire Line
+	5000 2950 5000 2550
+Wire Wire Line
+	5000 2550 6450 2550
+Connection ~ 6450 2550
+Wire Wire Line
+	6450 2550 6450 2750
+Wire Wire Line
+	5000 3050 5150 3050
+Wire Wire Line
+	5150 3050 5150 2600
+Wire Wire Line
+	5150 2600 6750 2600
+Connection ~ 6750 2600
+Wire Wire Line
+	6750 2600 6750 2700
+Wire Wire Line
+	7650 5800 7650 3750
+Wire Wire Line
+	7650 3750 7450 3750
+Wire Wire Line
+	5750 5800 7650 5800
+Wire Wire Line
+	5650 5800 5650 5750
+Wire Wire Line
+	5650 5750 7550 5750
+Wire Wire Line
+	7550 5750 7550 3850
+Wire Wire Line
+	7550 3850 7450 3850
+$Comp
+L power:GND #PWR?
+U 1 1 5E520F1E
+P 6950 5450
+F 0 "#PWR?" H 6950 5200 50  0001 C CNN
+F 1 "GND" H 6955 5277 50  0000 C CNN
+F 2 "" H 6950 5450 50  0001 C CNN
+F 3 "" H 6950 5450 50  0001 C CNN
+	1    6950 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 5450 6950 5400
+Connection ~ 6950 5400
+Wire Wire Line
+	5550 5800 5550 5700
+Wire Wire Line
+	5550 5700 7500 5700
+Wire Wire Line
+	7500 5700 7500 3950
+Wire Wire Line
+	7500 3950 7450 3950
+Wire Wire Line
+	4850 4000 5650 4000
+Wire Wire Line
+	5650 4000 5650 3950
+Wire Wire Line
+	5650 3950 5850 3950
+Wire Wire Line
+	4850 4100 5700 4100
+Wire Wire Line
+	5700 4100 5700 4050
+Wire Wire Line
+	5700 4050 5850 4050
+Wire Wire Line
+	4850 4200 5600 4200
+Wire Wire Line
+	5600 4200 5600 4550
+Wire Wire Line
+	5600 4550 5850 4550
+$Comp
+L ADC-PI-NEW_V2-cache:MakeShiftSensor_ADS1115IDGS U?
+U 1 1 5E4AE47F
+P 9850 4850
+F 0 "U?" H 9850 5531 50  0001 C CNN
+F 1 "ADS1115IDGS ADC" H 9850 5439 50  0000 C CNN
+F 2 "Package_SO:TSSOP-10_3x3mm_P0.5mm" H 9850 4350 50  0001 C CNN
+F 3 "" H 9800 3950 50  0001 C CNN
+	1    9850 4850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 4350 9850 2700
+Wire Wire Line
+	12250 1650 12250 2450
+Wire Wire Line
+	12250 2450 12350 2450
+Wire Wire Line
+	13300 5400 12200 5400
+$EndSCHEMATC

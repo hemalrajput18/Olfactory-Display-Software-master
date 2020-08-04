@@ -1,0 +1,18 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Bio_Chem_Valve
+#
+DEF Bio_Chem_Valve U 0 40 Y Y 1 F N
+F0 "U" -250 0 50 H V C CNN
+F1 "Bio_Chem_Valve" 100 -50 50 H V C CNN
+F2 "" -250 0 50 H I C CNN
+F3 "" -250 0 50 H I C CNN
+DRAW
+S -250 -100 250 -500 0 1 0 N
+X GND ~ 350 -350 100 L 50 50 1 1 P
+X VCC ~ 350 -200 100 L 50 50 1 1 W
+ENDDRAW
+ENDDEF
+#
+#End Library

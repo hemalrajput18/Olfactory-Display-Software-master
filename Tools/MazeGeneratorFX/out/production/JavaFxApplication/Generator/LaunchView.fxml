@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Generator.LaunchController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="261.0" prefWidth="443.0">
+         <children>
+            <JFXButton fx:id="AudioStimButton" buttonType="RAISED" layoutX="30.0" layoutY="36.0" mnemonicParsing="false" onAction="#NewAudioStimulus" opacity="0.9" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: #39A67F;" text="New Audio Stimulus" textFill="WHITE" />
+            <JFXButton fx:id="OlfactoryStimButton" buttonType="RAISED" layoutX="30.0" layoutY="68.0" mnemonicParsing="false" onAction="#NewOlfactoryStimulus" opacity="0.9" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: #39A67F;" text="New Olfactory Stimulus" textFill="WHITE" />
+            <JFXButton fx:id="VisualStimButton" buttonType="RAISED" layoutX="30.0" layoutY="100.0" mnemonicParsing="false" onAction="#NewVisualStimulus" opacity="0.9" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: #39A67F;" text="New Visual Stimulus" textFill="WHITE" />
+            <Label layoutX="136.0" layoutY="10.0" text="Current Selected Cell:" />
+            <Label fx:id="SelectedCellLabel" layoutX="253.0" layoutY="10.0" text="NaN, NaN" />
+            <JFXButton fx:id="FinishedButton" buttonType="RAISED" layoutX="30.0" layoutY="132.0" mnemonicParsing="false" onAction="#FinishedButton" opacity="0.9" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: #007CFF" text="Finished" textFill="WHITE" />
+            <Label layoutX="16.0" layoutY="166.0" text="Decision points: " />
+            <Label fx:id="diff" layoutX="104.0" layoutY="166.0" prefHeight="17.0" prefWidth="88.0" />
+            <Label layoutX="16.0" layoutY="183.0" text="Generated: " />
+            <Label fx:id="generated" layoutX="104.0" layoutY="183.0" prefHeight="17.0" prefWidth="88.0" text="0%" />
+            <Label layoutX="232.0" layoutY="40.0" text="Width:" />
+            <TextField fx:id="width_tb" disable="true" layoutX="271.0" layoutY="36.0" />
+            <Label layoutX="230.0" layoutY="72.0" text="Height:" />
+            <TextField fx:id="height_tb" disable="true" layoutX="271.0" layoutY="68.0" />
+            <Label layoutX="212.0" layoutY="104.0" text="Cell width:" />
+            <TextField fx:id="cellWidth_tb" layoutX="271.0" layoutY="100.0" />
+            <TextField fx:id="cellHeight_tb" layoutX="271.0" layoutY="132.0" />
+            <Label layoutX="209.0" layoutY="136.0" text="Cell height:" />
+            <Label layoutX="197.0" layoutY="166.0" text="Wall fraction:" />
+            <TextField fx:id="wallFraction_tb" layoutX="271.0" layoutY="163.0" />
+            <JFXButton fx:id="RemoveWallsButton" buttonType="RAISED" layoutX="30.0" layoutY="207.0" mnemonicParsing="false" onAction="#DeleteWalls" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #A60201;" text="Delete Walls" textFill="WHITE" />
+            <JFXButton fx:id="AddWallsButton" buttonType="RAISED" layoutX="125.0" layoutY="207.0" mnemonicParsing="false" onAction="#CreateWalls" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #39A67F;" text="Create Walls" textFill="WHITE" />
+            <JFXButton fx:id="DefineStimAreaButton" buttonType="RAISED" layoutX="219.0" layoutY="207.0" mnemonicParsing="false" onAction="#DefStimulusArea" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: #39A67F;" text="Create Stimulus Area" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

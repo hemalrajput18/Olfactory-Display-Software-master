@@ -1,0 +1,18 @@
+* source M165D25
+M_M1         N00111 N00486 0 0 MbreakN           
+D_D1         0 N00111 Dbreak 
+R_R1         N00460 N00111  2.7M TC=0,0 
+R_R2         N00460 N00472  750k TC=0,0 
+R_R3         N00472 N00486  2 TC=0,0 
+R_R4         N00502 N00486  680k TC=0,0 
+X_R5         N00502 0 0 POT PARAMS: SET=0.5 VALUE=1M
+C_C1         0 N00460  10n  TC=0,0 
+C_C2         N00581 N00111  47n  TC=0,0 
+C_C3         0 N00581  47n  TC=0,0 
+V_V1         N00419 0 24Vdc
+C_C4         N00581 N00111  2.5p  TC=0,0 
+C_C5         N012780 N012781  1  TC=0,0 
+R_R6         N00581 N012780  640 TC=0,0 
+L_L3         N00111 N012781  2.5  
+L_L2         N00581 N00472  5uH  
+L_L4         N00111 N00419  10uH  

@@ -1,0 +1,41 @@
+import bme280
+import csv
+import time
+from rtPeakDetector import real_time_peak_detection as rtpd
+import numpy as np
+(chip_id, chip_version) = bme280.readBME280ID()
+print("Chip ID     :", chip_id)
+print("Version     :", chip_version)
+f = open("output.csv", "w", newline='')
+pks = open("peaks.csv","w", newline='')
+writer = csv.writer(f)
+pks_writer = csv.writer(pks)
+writer.writerow(["sample_no", "temperature", "pressure", "humidity"])
+pks_writer.writerow(["peaks"])
+i = 1
+t = list()
+p = list()
+h = list()
+peaks = list()
+input("press any key to start test")
+print("starting test")
+stime = time.time()
+duration = 20.0
+r = None
+while time.time() - stime <= duration:
+    temperature, pressure, humidity = bme280.readBME280All()
+    t.append(temperature)
+    p.append(pressure)
+    h.append(humidity)
+    if i > 100:
+        r = rtpd(h,99,2.3
+,0)
+        peaks.append(r.thresholding_algo(humidity))
+    i = i + 1
+print("test complete, writing data")
+print("Sampling rate = " + str(i/duration))
+for j in range(i - 1):
+    writer.writerow([j, t[j], p[j], h[j]])
+
+for k in range(len(peaks)):
+    pks_writer.writerow([peaks[k]])

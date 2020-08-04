@@ -1,0 +1,54 @@
+
+**** 01/27/20 17:31:46 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim_1"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\m165d2
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim_1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\hemal\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source M165D25
+M_M1         N00111 N00486 N00118 N00118 MbreakN           
+D_D1         N00118 N00111 Dbreak 
+L_L1         N00419 N00408  4.4uH  
+R_R1         N00460 N00408  2.7M TC=0,0 
+R_R2         N00460 N00472  750k TC=0,0 
+R_R3         N00472 N00486  2 TC=0,0 
+R_R4         N00502 N00486  680k TC=0,0 
+X_R5         N00502 0 0 POT PARAMS: SET=0.5 VALUE=1M
+C_C1         0 N00460  10n  TC=0,0 
+C_C2         N00581 N00408  47n  TC=0,0 
+C_C3         0 N00581  47n  TC=0,0 
+V_V1         N00419 0 24Vdc
+L_L2         N00472 N00581  5uH  
+
+**** RESUMING sim_1.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node N00111 is floating
+
+ERROR(ORPSIM-15142): Node N00118 is floating
+

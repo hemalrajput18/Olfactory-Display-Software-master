@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MazeGeneratorFX:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MazeGeneratorFX_jar</output-path>
+    <root id="archive" name="MazeGeneratorFX.jar">
+      <element id="module-output" name="MazeGeneratorFX" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/out/production/JavaFxApplication/Lib/core.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/out/production/JavaFxApplication/Lib/controlsfx-8.40.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/out/production/JavaFxApplication/Lib/jfoenix-8.0.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/out/production/MazeGeneratorFX/Lib/core.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/JavaFxApplication/Lib/controlsfx-8.40.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/JavaFxApplication/Lib/jfoenix-8.0.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/out/artifacts/JavaFxApplication/Lib/core.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/Lib/controlsfx-8.40.14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/Lib/jfoenix-8.0.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/Lib/core.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

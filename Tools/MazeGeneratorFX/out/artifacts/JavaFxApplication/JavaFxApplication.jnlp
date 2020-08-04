@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaFxApplication.jnlp">
+  <information>
+    <title>JavaFxApplication</title>
+    <vendor>Unknown</vendor>
+    <description>JavaFxApplication</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JavaFxApplication.jar" size="20559" download="eager" />
+    <jar href="Lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
+    <jar href="Lib\core.jar" size="1071138" download="eager" />
+    <jar href="Lib\jfoenix-8.0.7.jar" size="2631271" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="Generator.Main"  name="JavaFxApplication" />
+  <update check="background"/>
+</jnlp>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Lib2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/production/JavaFxApplication/Lib/core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/out/production/JavaFxApplication/Lib/controlsfx-8.40.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/out/production/JavaFxApplication/Lib/jfoenix-8.0.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

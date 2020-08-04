@@ -1,0 +1,167 @@
+
+**** 01/27/20 17:56:01 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim_1"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\m165d2
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim_1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\hemal\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 400us 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source M165D25
+M_M1         N00111 N00486 0 0 MbreakN           
+D_D1         0 N00111 Dbreak 
+R_R1         N00460 N00111  2.7M TC=0,0 
+R_R2         N00460 N00472  750k TC=0,0 
+R_R3         N00472 N00486  2 TC=0,0 
+R_R4         N00502 N00486  680k TC=0,0 
+X_R5         N00502 0 0 POT PARAMS: SET=0.5 VALUE=1M
+C_C1         0 N00460  10n  TC=0,0 
+C_C2         N00581 N00111  47n  TC=0,0 
+C_C3         0 N00581  47n  TC=0,0 
+V_V1         N00419 0 24Vdc
+C_C4         N00581 N00111  2.5p  TC=0,0 
+C_C5         N012780 N012781  1  TC=0,0 
+R_R6         N00581 N012780  640 TC=0,0 
+L_L3         N00111 N012781  2.5  
+L_L2         N00581 N00472  5uH  
+L_L4         N00111 N00419  10uH  
+
+**** RESUMING sim_1.cir ****
+.END
+
+**** 01/27/20 17:56:01 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim_1"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\m165d2
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          
+          IS   10.000000E-15 
+          RS     .1          
+         CJO  100.000000E-15 
+
+
+**** 01/27/20 17:56:01 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim_1"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\m165d2
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MbreakN         
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    0            
+          KP   20.000000E-06 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 01/27/20 17:56:01 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim_1"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\m165d2
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00111)   24.0000 (N00419)   24.0000 (N00460)   24.0000 (N00472)   11.4130     
+
+(N00486)   11.4130 (N00502) 25.17E-09 (N00581)   11.4130 (N012780)   11.4130    
+
+(N012781)   24.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.319E-03
+
+    TOTAL POWER DISSIPATION   3.17E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 01/27/20 17:56:01 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-sim_1"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\m165d2
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .06
+

@@ -1,0 +1,225 @@
+@startuml
+
+title __GENERATOR's Class Diagram__\n
+
+  namespace Generator {
+    class Generator.ApplicationUtils {
+        {static} + currentStage : Stage
+        {static} - xOffset : double
+        {static} - yOffset : double
+        {static} + AlertWindow()
+        {static} + closeCurrentWindow()
+        {static} + switchWindow()
+        {static} + switchWindow()
+        {static} - enableMovingWindow()
+    }
+  }
+  
+
+  namespace Generator {
+    class Generator.Cell {
+        {static} + cells : Cell[][]
+        + current_fill : int[]
+        + i : int
+        + j : int
+        + visited : boolean
+        {static} + w : int
+        + walls : boolean[]
+        + checkNeighbors()
+        + getColumnIndex()
+        + getRowIndex()
+        + setStimulusType()
+        {static} + setWidth()
+        ~ Cell()
+        {static} - isCellValid()
+    }
+  }
+  
+
+  namespace Generator {
+    enum StimulusType {
+      AUDIO
+      NONE
+      OLFACTORY
+      VISUAL
+    }
+  }
+  
+
+  namespace Generator {
+    class Generator.JsonStructures {
+    }
+  }
+  
+
+  namespace Generator {
+    class Generator.JsonStructures.MazeData {
+        ~ cellHeight : double
+        ~ cellWidth : double
+        ~ height : int
+        ~ wallFraction : double
+        ~ width : int
+        + MazeData()
+    }
+  }
+  
+
+  namespace Generator {
+    class Generator.JsonStructures.MazeStimuli {
+        - ResourcePath : String
+        - STName : String
+        - type : String
+        + MazeStimuli()
+        + setMetaData()
+    }
+  }
+  
+
+  namespace Generator {
+    class Generator.JsonStructures.Point2D {
+        ~ Point2D()
+    }
+  }
+  
+
+  namespace Generator {
+    class Generator.JsonStructures.Point3D {
+        ~ Point3D()
+    }
+  }
+  
+
+  namespace Generator {
+    class Generator.LaunchController {
+        {static} + currentMode : Mode
+        {static} + x : int
+        {static} + y : int
+        ~ AddWallsButton : JFXButton
+        ~ AudioStimButton : JFXButton
+        ~ DefineStimAreaButton : JFXButton
+        ~ OlfactoryStimButton : JFXButton
+        ~ RemoveWallsButton : JFXButton
+        ~ SelectedCellLabel : Label
+        ~ VisualStimButton : JFXButton
+        ~ cellHeight_tb : TextField
+        ~ cellWidth_tb : TextField
+        ~ diff : Label
+        ~ generated : Label
+        ~ height_tb : TextField
+        ~ wallFraction_tb : TextField
+        ~ width_tb : TextField
+        - fileChooser : FileChooser
+        - selectedFile : File
+        + initialize()
+        + updateDifficulty()
+        + updateGenerated()
+        + updateLabel()
+        - CreateWalls()
+        - DefStimulusArea()
+        - DeleteWalls()
+        - FinishedButton()
+        - NewAudioStimulus()
+        - NewOlfactoryStimulus()
+        - NewVisualStimulus()
+        - makeNumericOnly()
+    }
+  }
+  
+
+  namespace Generator {
+    enum Mode {
+      CreateWalls
+      DefStimArea
+      DeleteWalls
+      None
+    }
+  }
+  
+
+  namespace Generator {
+    class Generator.Main {
+        {static} + controller : FXMLLoader
+        {static} + main : Main
+        {static} + mazeGen : MazeGen
+        {static} + properties : Properties
+        {static} - propFileName : String
+        {static} + main()
+        + start()
+        - getProperties()
+    }
+  }
+  
+
+  namespace Generator {
+    class Generator.MazeGen {
+        {static} + FPS : int
+        {static} + cellHeight : double
+        {static} + cellToEdit : Cell
+        {static} + cellWidth : double
+        {static} + decision_points : List<Cell>
+        {static} + fw : Writer
+        {static} + noCells : int
+        {static} + s : int
+        {static} + stimuliList : List<MazeStimuli>
+        {static} + visited_count : int
+        {static} + w : int
+        {static} + wallFraction : double
+        {static} ~ cell_stack : Stack<Cell>
+        {static} ~ cols : int
+        ~ maze_difficulty : double
+        {static} ~ maze_endpoints : int[][]
+        {static} ~ rows : int
+        {static} ~ state : int
+        + addAuditoryStimulus()
+        + addOlfactoryStimulus()
+        + addVisualStimulus()
+        + display()
+        + draw()
+        + highlight()
+        + mark()
+        + mark()
+        + mousePressed()
+        + setFill()
+        + settings()
+        + setup()
+        + show()
+        - findDecisionPoints()
+        {static} - generateMazeASCII()
+        - handleStartEndPointCreation()
+        - handleStimulusCreation()
+        - handleWallCreate()
+        - handleWallDelete()
+        {static} - removeWalls()
+    }
+  }
+  
+
+  Generator.Cell o-- Generator.Cell.StimulusType : stimulusType
+  Generator.Cell +-down- Generator.Cell.StimulusType
+  Generator.JsonStructures +-down- Generator.JsonStructures.MazeData
+  Generator.JsonStructures +-down- Generator.JsonStructures.MazeStimuli
+  Generator.JsonStructures +-down- Generator.JsonStructures.Point2D
+  Generator.JsonStructures +-down- Generator.JsonStructures.Point3D
+  Generator.JsonStructures.MazeStimuli o-- T : MetaData
+  Generator.JsonStructures.MazeStimuli o-- Generator.JsonStructures.Point2D : cell
+  Generator.JsonStructures.MazeStimuli o-- Generator.JsonStructures.Point3D : size
+  Generator.JsonStructures.Point2D o-- T : x
+  Generator.JsonStructures.Point2D o-- T : y
+  Generator.JsonStructures.Point3D o-- T : x
+  Generator.JsonStructures.Point3D o-- T : y
+  Generator.JsonStructures.Point3D o-- T : z
+  Generator.LaunchController .up.|> javafx.fxml.Initializable
+  Generator.LaunchController +-down- Generator.LaunchController.Mode
+  Generator.Main -up-|> javafx.application.Application
+  Generator.MazeGen -up-|> processing.core.PApplet
+  Generator.MazeGen o-- Generator.Cell : current
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

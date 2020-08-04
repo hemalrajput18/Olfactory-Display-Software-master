@@ -1,0 +1,11 @@
+(sym_lib_table
+  (lib (name Sensor)(type Legacy)(uri ${KIPRJMOD}/Sensor.lib)(options "")(descr ""))
+  (lib (name ADC-PI-NEW_V2-cache)(type Legacy)(uri "C:/Users/Nishat Tarannum/Documents/Fourth Year/EG4006 Fourth Year Project/Circuits/ADC Pi Circuit/ADC-PI-NEW/ADC-PI-NEW_V2-cache.lib")(options "")(descr ""))
+  (lib (name DAC)(type Legacy)(uri ${KIPRJMOD}/DAC.lib)(options "")(descr ""))
+  (lib (name KNF_Pump)(type Legacy)(uri ${KIPRJMOD}/KNF_Pump.lib)(options "")(descr ""))
+  (lib (name Bio_Chem)(type Legacy)(uri ${KIPRJMOD}/Bio_Chem.lib)(options "")(descr ""))
+  (lib (name PID)(type Legacy)(uri ${KIPRJMOD}/PID.lib)(options "")(descr ""))
+  (lib (name Stepper_Motor_Controller)(type Legacy)(uri ${KIPRJMOD}/Stepper_Motor_Controller.lib)(options "")(descr ""))
+  (lib (name 30V)(type Legacy)(uri ${KIPRJMOD}/30V.lib)(options "")(descr ""))
+  (lib (name 12V)(type Legacy)(uri ${KIPRJMOD}/12V.lib)(options "")(descr ""))
+)

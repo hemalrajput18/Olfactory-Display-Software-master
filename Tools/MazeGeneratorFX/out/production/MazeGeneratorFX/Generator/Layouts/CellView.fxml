@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="437.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Generator.Controllers.CellLayoutController">
+   <children>
+      <Rectangle fx:id="CeilingBox" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="84.0" layoutX="121.0" layoutY="42.0" onMouseClicked="#ceilingClick" stroke="WHITE" strokeType="INSIDE" width="96.0" />
+      <Rectangle fx:id="FrontWallBox" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="84.0" layoutX="121.0" layoutY="134.0" onMouseClicked="#frontWallClick" stroke="WHITE" strokeType="INSIDE" width="96.0" />
+      <Rectangle fx:id="FloorBox" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="84.0" layoutX="121.0" layoutY="226.0" onMouseClicked="#floorClick" stroke="WHITE" strokeType="INSIDE" width="96.0" />
+      <Rectangle fx:id="RightWallBox" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="84.0" layoutX="226.0" layoutY="134.0" onMouseClicked="#rightWallClick" stroke="WHITE" strokeType="INSIDE" width="96.0" />
+      <Rectangle fx:id="LeftWallBox" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="84.0" layoutX="15.0" layoutY="134.0" onMouseClicked="#leftWallClick" stroke="WHITE" strokeType="INSIDE" width="96.0" />
+      <Rectangle fx:id="BackWallBox" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="84.0" layoutX="329.0" layoutY="134.0" onMouseClicked="#backWallClick" stroke="WHITE" strokeType="INSIDE" width="96.0" />
+      <Label layoutX="137.0" layoutY="166.0" text="Front wall" textFill="WHITE" />
+      <Label layoutX="131.0" layoutY="74.0" text="Top/Ceiling" textFill="WHITE" />
+      <Label layoutX="125.0" layoutY="258.0" text="Bottom/Floor" textFill="WHITE" />
+      <Label layoutX="242.0" layoutY="166.0" text="Right wall" textFill="WHITE" />
+      <Label layoutX="345.0" layoutY="166.0" text="Back wall" textFill="WHITE" />
+      <Label layoutX="36.0" layoutY="166.0" text="Left wall" textFill="WHITE" />
+      <Label layoutX="24.0" layoutY="326.0" text="Image Path:" />
+      <TextField fx:id="ImagePath" layoutX="24.0" layoutY="353.0" prefHeight="31.0" prefWidth="270.0" />
+      <JFXButton fx:id="AddButton" buttonType="RAISED" layoutX="313.0" layoutY="353.0" mnemonicParsing="false" onAction="#Add" opacity="0.9" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: #007CFF" text="Select" textFill="WHITE" />
+      <Label layoutX="19.0" layoutY="10.0" text="Select a wall to apply an image:" />
+      <JFXButton fx:id="ConfirmButton" buttonType="RAISED" layoutX="313.0" layoutY="392.0" mnemonicParsing="false" onAction="#Confirm" opacity="0.9" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: #007CFF" text="Confirm" textFill="WHITE" />
+      <JFXButton fx:id="Cancel" buttonType="RAISED" layoutX="214.0" layoutY="392.0" mnemonicParsing="false" onAction="#Cancel" opacity="0.9" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: #007CFF" text="Cancel" textFill="WHITE" />
+   </children>
+</AnchorPane>

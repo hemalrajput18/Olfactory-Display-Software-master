@@ -1,0 +1,2 @@
+javac -cp classes:jars/* -d classes *.java
+java -cp ./jars/*:. Client.RPiMain 192.168.137.1 8099

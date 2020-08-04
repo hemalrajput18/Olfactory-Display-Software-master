@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Regulator_Switching)(type Legacy)(uri ${KIPRJMOD}/Regulator_Switching.lib)(options "")(descr ""))
+  (lib (name power)(type Legacy)(uri ${KIPRJMOD}/power.lib)(options "")(descr ""))
+)

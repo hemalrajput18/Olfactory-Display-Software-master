@@ -1,0 +1,486 @@
+
+**** 01/29/20 22:29:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\piezo_1
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\hemal\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 100us 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PIEZO_113
+X_X1         N00443 N00690 N00187 N00156 N02408 N00690 N02415 N00156 555D
++  PARAMS: MAXFREQ=3E6
+X_U1         N00152 0 N00156 awbl78l05c PARAMS:                   
+X_M1         N03130 N002141 0 IRLZ44N
+C_C5         0 N00443  100n  TC=0,0 
+C_C6         0 N00690  10n  TC=0,0 
+R_R2         N00187 N002141  100 TC=0,0 
+R_R3         0 N002141  10k TC=0,0 
+C_C7         N00690 0  10n  TC=0,0 
+V_V1         N00152 0 26Vdc
+R_R4         0 N02408  100M TC=0,0 
+R_R5         0 N02415  100M TC=0,0 
+R_R6         N00690 N00187  5k TC=0,0 
+L_L1         N00152 N03137  10uH  
+C_C8         N03137 N03130  100u  TC=0,0 
+
+**** RESUMING test.cir ****
+.END
+
+
+**** Generated AtoD and DtoA Interfaces ****
+
+*
+* Analog/Digital interface for node N00187
+*
+* Moving X_X1.u1:Q1 from analog node N00187 to new digital node N00187$DtoA
+X$N00187_DtoA1
++ N00187$DtoA
++ N00187
++ N00156
++ N00443
++ dtoa_555
++       PARAMS: DRVH=  96.4   DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface for node N00156
+*
+* Moving X_X1.u1:CLRBAR from analog node N00156 to new digital node N00156$AtoD
+X$N00156_AtoD1
++ N00156
++ N00156$AtoD
++ N00156
++ N00443
++ atod_555
++       PARAMS: CAPACITANCE=   0     
+*
+* Analog/Digital interface for node X_X1.qb
+*
+* Moving X_X1.u1:QBAR1 from analog node X_X1.qb to new digital node X_X1.qb$DtoA
+X$X_X1.qb_DtoA1
++ X_X1.qb$DtoA
++ X_X1.qb
++ N00156
++ N00443
++ dtoa_555
++       PARAMS: DRVH=  96.4   DRVL= 104    CAPACITANCE=   0     
+*
+* Analog/Digital interface power supply subcircuits
+*
+X$DIGIFPWR 0 DIGIFPWR
+
+
+**** 01/29/20 22:29:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\piezo_1
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M1.MD         X_M1.MD1        X_M1.MD2        X_M1.MD3        
+          IS    4.457400E-09    0             100.000000E-12  100.000000E-12 
+           N    1.40246        50                .4              .4          
+          BV   55                                                            
+         IBV  250.000000E-06                                                 
+          RS    7.275000E-03                    3.000000E-06                 
+         CJO  892.434000E-12    1.154010E-09                                 
+          VJ    4.94724          .859156                                     
+           M     .75496          .642548                                     
+          FC                   10.000000E-09                                 
+          EG    1.14011                                                      
+         XTI    3.00078                                                      
+
+
+**** 01/29/20 22:29:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\piezo_1
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.nchan      X_M1.MM         
+               NMOS            NMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    0               2.08819      
+          KP   20.000000E-06   67.9211       
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               3.819300E-03 
+          IS   10.000000E-15    0            
+          JS    0               0            
+          PB     .8              .8          
+        PBSW     .8              .8          
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    1.000000E-12   15.914300E-06 
+        CGDO    1.000000E-12   30.456200E-09 
+        CGBO    1.000000E-12    0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 01/29/20 22:29:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\piezo_1
+
+
+ ****     Digital Input MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               din555          
+      S0NAME 0               
+       S0TSW  700.000000E-12 
+       S0RLO  100            
+       S0RHI    1.000000E+06 
+      S1NAME 1               
+       S1TSW  700.000000E-12 
+       S1RLO    1.000000E+06 
+       S1RHI  300            
+      S2NAME x               
+       S2TSW  700.000000E-12 
+       S2RLO  200            
+       S2RHI  200            
+      S3NAME r               
+       S3TSW  700.000000E-12 
+       S3RLO  200            
+       S3RHI  200            
+      S4NAME f               
+       S4TSW  700.000000E-12 
+       S4RLO  200            
+       S4RHI  200            
+      S5NAME z               
+       S5TSW  700.000000E-12 
+       S5RLO  200.000000E+03 
+       S5RHI  200.000000E+03 
+
+
+**** 01/29/20 22:29:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\piezo_1
+
+
+ ****     Digital Output MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.cmp        do555           
+    TIMESTEP  100.000000E-12  100.000000E-12 
+      S0NAME 0               1               
+       S0VHI                   18            
+       S0VLO -500                .4          
+      S1NAME 1               0               
+       S1VHI  500                .4          
+       S1VLO                   -1.5          
+
+
+**** 01/29/20 22:29:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\piezo_1
+
+
+ ****     Digital Gated FF MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.t_srff     
+    TPDQLHMN    0            
+    TPDQLHTY    0            
+    TPDQLHMX    0            
+    TPDQHLMN    0            
+    TPDQHLTY    0            
+    TPDQHLMX    0            
+    TPGQLHMN    0            
+    TPGQLHTY    0            
+    TPGQLHMX    0            
+    TPGQHLMN    0            
+    TPGQHLTY    0            
+    TPGQHLMX    0            
+   TPPCQLHMN   48.000000E-09 
+   TPPCQLHTY  120.000000E-09 
+   TPPCQLHMX  192.000000E-09 
+   TPPCQHLMN    0            
+   TPPCQHLTY    0            
+   TPPCQHLMX    0            
+      TWGHMN    0            
+      TWGHTY    0            
+      TWGHMX    0            
+     TWPCLMN    0            
+     TWPCLTY    0            
+     TWPCLMX    0            
+     TSUDGMN    0            
+     TSUDGTY    0            
+     TSUDGMX    0            
+   TSUPCGHMN    0            
+   TSUPCGHTY    0            
+   TSUPCGHMX    0            
+      THDGMN    0            
+      THDGTY    0            
+      THDGMX    0            
+TIMING_SRDEL    0            
+TIMING_CLKDEL    0            
+
+
+**** 01/29/20 22:29:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\piezo_1
+
+
+ ****     Digital Delay Line MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.dlymod     
+       DLYMN  166.666700E-09 
+       DLYTY  166.666700E-09 
+       DLYMX  166.666700E-09 
+
+
+**** 01/29/20 22:29:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\piezo_1
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_X1.io_555     io_std          io_stm          
+        DRVL  104             104               0            
+        DRVH   96.4            96.4             0            
+       AtoD1 atod_555        AtoD_STD                        
+       AtoD2 atod_555        AtoD_STD_NX                     
+       AtoD3 atod_555        AtoD_STD                        
+       AtoD4 atod_555        AtoD_STD_NX                     
+       DtoA1 dtoa_555        DtoA_STD        DtoA_STM        
+       DtoA2 dtoa_555        DtoA_STD        DtoA_STM        
+       DtoA3 dtoa_555        DtoA_STD        DtoA_STM        
+       DtoA4 dtoa_555        DtoA_STD        DtoA_STM        
+      TSWHL1                    1.511000E-09                 
+      TSWHL2                    1.487000E-09                 
+      TSWHL3                    1.511000E-09                 
+      TSWHL4                    1.487000E-09                 
+      TSWLH1                    3.517000E-09                 
+      TSWLH2                    3.564000E-09                 
+      TSWLH3                    3.517000E-09                 
+      TSWLH4                    3.564000E-09                 
+       TPWRT  100.000000E+03  100.000000E+03  100.000000E+03 
+
+
+**** 01/29/20 22:29:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-test"  [ C:\Users\hemal\Documents\GitHub\Olfactory-Display-Software\Circuit Diagrams for Tests\ORCAD\piezo_1
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00152)   26.0000 (N00156)    5.3186 (N00187) 724.3E-06 (N00443) 199.7E-06     
+
+(N00690) 724.3E-06 (N02408) 3.546E-06 (N02415) 1.056E-06 (N03130) 3.725E-09     
+
+(N03137)   26.0000 (X_M1.4)    0.0000 (X_M1.5)-717.2E-06 (X_M1.6)-717.2E-06     
+
+(X_M1.7) 717.2E-06 (X_M1.8) 52.40E-24 (X_M1.9) 3.725E-09 ($G_DGND)    0.0000    
+
+($G_DPWR)    5.0000                   (N002141) 717.2E-06                       
+
+(X_M1.10)-717.2E-06                   (X_M1.11)-717.2E-06                       
+
+(X_X1.qb)    5.3170                   (X_X1.botm) 101.6E-06                     
+
+(X_U1.xinstl78l05c.2)    5.3257       (X_U1.xinstl78l05c.3)  532.3700           
+
+(X_U1.xinstl78l05c.4)    0.0000       (X_U1.xinstl78l05c.5)   50.1810           
+
+(X_U1.xinstl78l05c.7)  730.7100       (X_U1.xinstl78l05c.8)    1.0000           
+
+(X_U1.xinstl78l05c.9) 10.00E+03       (X_U1.xinstl78l05c.10)    5.3193          
+
+(X_U1.xinstl78l05c.11)   65.3190      (X_U1.xinstl78l05c.12)-10.00E+03          
+
+(X_U1.xinstl78l05c.13)   26.0000      (X_U1.xinstl78l05c.14)   25.0000          
+
+(X_U1.xinstl78l05c.15)   25.4160      (X_U1.xinstl78l05c.16) 56.17E+03          
+
+(X_U1.xinstl78l05c.17)    1.0000      (X_U1.xinstl78l05c.18)   25.0000          
+
+(X_U1.xinstl78l05c.19)    5.3237      (X_U1.xinstl78l05c.20) 56.23E+03      
+
+
+
+ DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE
+
+
+(  X_X1.r) : 1     ( X_X1.sd) : 0     (N00187$DtoA) : 0  ( X_X1.rd) : 1         
+
+(N00156$AtoD) : 1  (X_X1.strt) : 0    (  X_X1.s) : 0     ( X_X1.hi) : 1         
+
+(X_X1.qb$DtoA) : 1                    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -6.428E-03
+    X_M1.VFI2   -7.172E-16
+    X_M1.VFI1    0.000E+00
+    X_U1.xinstl78l05c.VV39  -9.951E-09
+    X_U1.xinstl78l05c.VV38  -4.090E-11
+    X_U1.xinstl78l05c.VV37  -1.005E-08
+    X$DIGIFPWR.VDPWR  -5.000E-06
+    X$DIGIFPWR.VDGND  -5.000E-06
+
+    TOTAL POWER DISSIPATION   1.67E-01  WATTS
+
+Reducing minimum delta to make the circuit converge.
+Reducing minimum delta to make the circuit converge.
+
+ERROR(ORPSIM-15138): Convergence problem in Transient Analysis at Time =  153.0E-09.
+         Time step =  144.4E-21, minimum allowable step size =  1.000E-18
+
+  These voltages failed to converge:
+
+    V(N002141)                =    1.392mV  \   649.73uV
+    V(N03130)                 =   779.32uV  \   -77.92uV
+    V(X_M1.9)                 =   690.91uV  \   -69.08uV
+    V(X_M1.7)                 =    1.408mV  \   648.09uV
+    V(X_M1.8)                 =   690.89uV  \   -69.07uV
+
+  These supply currents failed to converge:
+
+    I(X_M1.EV16)              =   -8.848nA  \    24.21nA
+    I(X_U1.xinstl78l05c.EV25) =   -68.72uA  \   -52.61uA
+    I(V_V1)                   =   -6.447mA  \   -6.431mA
+    I(X_M1.VFI2)              =    9.428nA  \   -24.12nA
+    I(X_U1.xinstl78l05c.VV38) =   -14.80nA  \   127.81pA
+
+  These devices failed to converge:
+    X_M1.D2   
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00152)   26.0000 (N00156)    5.3186 (N00187) 724.3E-06 (N00443) 199.7E-06     
+
+(N00690) 724.3E-06 (N02408) 3.546E-06 (N02415) 1.056E-06 (N03130) 779.3E-06     
+
+(N03137)   26.0010 (X_M1.4)    0.0000 (X_M1.5)-717.1E-06 (X_M1.6)-717.1E-06     
+
+(X_M1.7)     .0014 (X_M1.8) 690.9E-06 (X_M1.9) 690.9E-06 ($G_DGND)    0.0000    
+
+($G_DPWR)    5.0000                   (N002141)     .0014                       
+
+(X_M1.10)-717.1E-06                   (X_M1.11)-717.1E-06                       
+
+(X_X1.qb)    5.3170                   (X_X1.botm) 101.6E-06                     
+
+(X_U1.xinstl78l05c.2)    5.3257       (X_U1.xinstl78l05c.3)  532.3700           
+
+(X_U1.xinstl78l05c.4)    0.0000       (X_U1.xinstl78l05c.5)   50.1810           
+
+(X_U1.xinstl78l05c.7)  730.7100       (X_U1.xinstl78l05c.8)    1.0000           
+
+(X_U1.xinstl78l05c.9) 10.00E+03       (X_U1.xinstl78l05c.10)    5.3193          
+
+(X_U1.xinstl78l05c.11)   65.3190      (X_U1.xinstl78l05c.12)-10.00E+03          
+
+(X_U1.xinstl78l05c.13)   26.0000      (X_U1.xinstl78l05c.14)   25.0000          
+
+(X_U1.xinstl78l05c.15)   25.4160      (X_U1.xinstl78l05c.16) 56.17E+03          
+
+(X_U1.xinstl78l05c.17)    1.0000      (X_U1.xinstl78l05c.18)   25.0000          
+
+(X_U1.xinstl78l05c.19)    5.3237      (X_U1.xinstl78l05c.20) 56.23E+03      
+
+
+
+ DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE
+
+
+(  X_X1.r) : 1     ( X_X1.sd) : 0     (N00187$DtoA) : 0  ( X_X1.rd) : 1         
+
+(N00156$AtoD) : 1  (X_X1.strt) : 1    (  X_X1.s) : 0     ( X_X1.hi) : 1         
+
+(X_X1.qb$DtoA) : 1                    
+
+
+**** Interrupt ****

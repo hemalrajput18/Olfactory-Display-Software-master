@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\hemal\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\hemal\\.nuget\\packages"
+    ]
+  }
+}

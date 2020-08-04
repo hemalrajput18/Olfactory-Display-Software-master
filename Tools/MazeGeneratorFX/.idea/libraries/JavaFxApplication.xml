@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="JavaFxApplication">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/JavaFxApplication/JavaFxApplication.jar!/" />
+      <root url="jar://$PROJECT_DIR$/out/artifacts/JavaFxApplication/MazeGenerator v1 BETA.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
